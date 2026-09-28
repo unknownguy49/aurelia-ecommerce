@@ -1,0 +1,132 @@
+.products-page{
+    width:min(1400px,92%);
+    margin:0 auto;
+    padding:90px 0 120px;
+}
+
+.products-header{
+    max-width:720px;
+    margin-bottom:70px;
+}
+
+.section-eyebrow{
+    margin-bottom:20px;
+    color:var(--accent);
+    font-size:0.7rem;
+    font-weight:600;
+    letter-spacing:0.2em;
+}
+
+.products-header h1{
+    margin-bottom:24px;
+    font-size:clamp(3rem,6vw,5.5rem);
+}
+
+.products-header > p:not(.section-eyebrow){
+    max-width:560px;
+    color:var(--text-secondary);
+    line-height:1.8;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:55px 24px;
+}
+
+.products-state{
+    min-height:60vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 0;
+    color:var(--text-secondary);
+    text-align:center;
+}
+
+.products-error{
+    color:var(--error);
+}
+
+@container (max-width:1200px){
+    .products-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+}
+
+@container (max-width:800px){
+    .products-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:45px 16px;
+    }
+}
+
+@media(max-width:750px){
+    .products-page{
+        padding:60px 0 90px;
+    }
+
+    .products-header{
+        margin-bottom:50px;
+    }
+
+    .products-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:42px 16px;
+    }
+}
+
+@media(max-width:600px){
+    .products-page{
+        width:90%;
+        padding:50px 0 80px;
+    }
+
+    .products-header{
+        margin-bottom:42px;
+    }
+
+    .section-eyebrow{
+        margin-bottom:15px;
+        font-size:0.62rem;
+    }
+
+    .products-header h1{
+        margin-bottom:18px;
+        font-size:clamp(2.6rem,11vw,4rem);
+        line-height:1.05;
+    }
+
+    .products-header > p:not(.section-eyebrow){
+        font-size:0.85rem;
+        line-height:1.7;
+    }
+
+    .products-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:36px 14px;
+    }
+}
+
+@media(max-width:420px){
+    .products-page{
+        width:91%;
+        padding-top:45px;
+    }
+
+    .products-header{
+        margin-bottom:36px;
+    }
+
+    .products-header h1{
+        font-size:clamp(2.4rem,11.5vw,3.4rem);
+    }
+
+    .products-header > p:not(.section-eyebrow){
+        font-size:0.8rem;
+    }
+
+    .products-grid{
+        gap:32px 12px;
+    }
+}

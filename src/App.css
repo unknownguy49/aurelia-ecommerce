@@ -1,0 +1,31 @@
+.app-layout{
+    width:100%;
+    min-width:0;
+}
+
+.app-layout-with-cart{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 360px;
+    align-items:start;
+}
+
+.app-content{
+    min-width:0;
+    container-type:inline-size;
+}
+
+@media(max-width:900px){
+    .app-layout-with-cart{
+        display:block;
+    }
+
+    .app-content{
+        padding-bottom:calc(52dvh + env(safe-area-inset-bottom) + 24px);
+    }
+}
+
+@media(max-width:600px){
+    .app-content{
+        padding-bottom:calc(55dvh + env(safe-area-inset-bottom) + 24px);
+    }
+}
